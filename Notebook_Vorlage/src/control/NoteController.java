@@ -20,8 +20,8 @@ public class NoteController {
      */
     public Note createToDoNote(String title, String content){
         //TODO: Implementiere die Methode
-        new ToDoNote(title, content);
-        return null;
+        ToDoNote toDo = new ToDoNote(title, content);
+        return toDo;
     }
 
     /**

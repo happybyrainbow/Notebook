@@ -57,11 +57,7 @@ public class UserController {
      */
     public void addNoteToUser(String username, Note note){
         //TODO: Implementiere die Methode.
-        for (int i = 0; i < users.length; i++) {
-            if (users[i].getUsername().equals(username)) {
-
-            }
-        }
+        getUserByUsername(username).addNote(note);
     }
 
     /**

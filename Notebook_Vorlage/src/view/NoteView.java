@@ -84,6 +84,14 @@ public class NoteView {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //TODO: Implementiere das Verhalten des addQuote-Buttons
+                if(userSelection.getSelectedItem()!=null) {
+                    String username = userSelection.getSelectedItem().toString();
+                    Note note = noteController.createToDoNote(toDoTitle.getText(), toDoContent.getText());
+
+                    userController.addNoteToUser(username, note);
+                    updateDisplay();
+
+               }
             }
         });
 
@@ -92,6 +100,16 @@ public class NoteView {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //TODO: Implementiere das Verhalten des invertToDo-Buttons
+//                if(userSelection.getSelectedItem()!=null) {
+//                    String username = userSelection.getSelectedItem().toString();
+//                    int index = Str+
+//                            invertToDoFlag.getText();
+//                    User user = userController.getUserByUsername(invertToDo.getText());
+//
+//                    noteController.invertToDoNote(username, index);
+//                    updateDisplay();
+//
+//                }
             }
         });
 

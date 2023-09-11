@@ -7,7 +7,7 @@ public class User {
 
     public User(String username){
         //TODO: Implementiere den Konstruktor.
-        new User(username);
+        //new User(username);
         this.username = username;
         notes = new Note[20];
         noteCount = 0;
@@ -22,6 +22,7 @@ public class User {
         //TODO: Implementiere die Methode
         if(noteCount < notes.length){
             notes[noteCount] = note;
+            noteCount += 1;
             return true;
         }else{
             return false;
@@ -36,14 +37,14 @@ public class User {
      */
     public boolean removeNote(int index) {
         //TODO: Implementiere die Methode
-        for (int i = index; i < notes.length; i++) {
-            if (i >= 0 && i < noteCount) {
+            if (index < 0 && index >= noteCount) {
+                for (int i = index; i < noteCount - 1; i++) {
                 notes[i] = notes[i + 1];
+            }
                 notes[noteCount] = null;
                 noteCount -= 1;
                 return true;
             }
-        }
         return false;
     }
 

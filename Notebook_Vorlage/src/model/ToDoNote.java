@@ -17,8 +17,12 @@ public class ToDoNote extends Note {
     @Override
     public String display() {
         //TODO: Implementiere die Methode display() entsprechend der Dokumentation / des Kommentars oben.
-        String display = "Titel: " + title + " Inhalt: " + content + " Datum: " + getCreationDate() + " Fertiggestellt " + completed;
-        return display;
+        String display = "Titel: " + title + " Inhalt: " + content + " Datum: " + getCreationDate() + " Fertiggestellt: ";
+        if(completed) {
+            return display + "Ja";
+        }else{
+            return display + "Nein";
+        }
     }
 
     /**

@@ -10,6 +10,7 @@ public abstract class Note {
     public Note(String title, String content) {
         this.title = title;
         this.content = content;
+        creationDate = new Date();
     }
 
     public abstract String display();
